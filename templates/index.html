@@ -12,12 +12,42 @@
             white-space: pre-wrap;
             font-size: 12px;
         }
+
         .glow {
             text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea;
         }
-        </style>
+
+        .menu {
+            margin-bottom: 2rem;
+        }
+
+        .menu a {
+            display: inline-block;
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #00ffea;
+            color: #00ffea;
+            text-decoration: none;
+            background-color: transparent;
+            font-weight: bold;
+            text-shadow: 0 0 3px #00ffea;
+        }
+
+        .menu a:hover {
+            background-color: #003333;
+            box-shadow: 0 0 10px #00ffea;
+        }
+    </style>
 </head>
 <body>
+    <div class="menu">
+        <a href="/?room=north">Go North</a>
+        <a href="/?room=south">Go South</a>
+        <a href="/?room=east">Go East</a>
+        <a href="/?room=west">Go West</a>
+        <a href="/?room=home">Return Home</a>
+    </div>
+
     <div class="cyberpunk-glow">
         <pre>{{ art }}</pre>
     </div>
