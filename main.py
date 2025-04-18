@@ -13,6 +13,6 @@ def home():
 from player_stats import Player
 
 if __name__ == "__main__":
-    player = Player(hp=100, holding_item=[]) 
+    player = Player(hp=100, items=[], holding_item=[]) 
 
     app.run(debug=True)

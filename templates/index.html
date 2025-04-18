@@ -5,6 +5,9 @@
     <title>Cyberpunk Terminal</title>
     <style>
         body {
+            align-content: center;
+            display: flex;
+            justify-content: center;
             background-color: #0f0f0f;
             color: #00ffea;
             font-family: monospace;
@@ -37,19 +40,31 @@
             background-color: #003333;
             box-shadow: 0 0 10px #00ffea;
         }
+
+        .cyberpunk-art {
+            margin-bottom: 2rem;
+        }
+
+        .controls {
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
-    <div class="menu">
-        <a href="/?room=north">Go North</a>
-        <a href="/?room=south">Go South</a>
-        <a href="/?room=east">Go East</a>
-        <a href="/?room=west">Go West</a>
-        <a href="/?room=home">Return Home</a>
-    </div>
+    <div style="flex:1 align-center">
 
-    <div class="cyberpunk-glow">
-        <pre>{{ art }}</pre>
+    <div class="cyberpunk-art">
+        <pre class="glow">{{ art }}</pre>
+    </div>
+    <div class="controls">
+        <div class="menu">
+            <a href="/?room=north">Go North</a>
+            <a href="/?room=south">Go South</a>
+            <a href="/?room=east">Go East</a>
+            <a href="/?room=west">Go West</a>
+            <a href="/?room=home">Return Home</a>
+        </div>
+    </div>
     </div>
 </body>
 </html>
