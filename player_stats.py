@@ -3,3 +3,4 @@ class Player:
         self.hp = hp
         self.items = items  # List of items in inventory
         self.holding_item = holding_item  # List of currently held items
+
