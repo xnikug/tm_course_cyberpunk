@@ -7,6 +7,7 @@
         body {
             align-content: center;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             background-color: #0f0f0f;
             color: #00ffea;
@@ -41,7 +42,7 @@
             box-shadow: 0 0 10px #00ffea;
         }
 
-        .cyberpunk-art {
+        .ascii-art {
             margin-bottom: 2rem;
         }
 
@@ -51,20 +52,25 @@
     </style>
 </head>
 <body>
-    <div style="flex:1 align-center">
-
-    <div class="cyberpunk-art">
+    <div class="ascii-art">
         <pre class="glow">{{ art }}</pre>
     </div>
-    <div class="controls">
-        <div class="menu">
-            <a href="/?room=north">Go North</a>
-            <a href="/?room=south">Go South</a>
-            <a href="/?room=east">Go East</a>
-            <a href="/?room=west">Go West</a>
-            <a href="/?room=home">Return Home</a>
-        </div>
+    
+    {% if message %}
+    <div class="message">
+        <p class="glow">{{ message }}</p>
     </div>
+    {% endif %}
+
+    <div class="menu">
+        <h3 class="glow">MAIN MENU</h3>
+        <a href="/?action=explore&room=north">Explore North</a>
+        <a href="/?action=explore&room=south">Explore South</a>
+        <a href="/?action=explore&room=east">Explore East</a>
+        <a href="/?action=explore&room=west">Explore West</a>
+        <a href="/?action=inventory">Inventory</a>
+        <a href="/?action=craft">Craft</a>
+        <a href="/?action=quit">Quit</a>
     </div>
 </body>
 </html>
