@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyberpunk Terminal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="cyberpunk-art">
+            <pre class="glow">{{ art }}</pre>
+        </div>
+
+        <div class="controls">
+            <div class="menu">
+                <a href="/?room=north">Go North</a>
+                <a href="/?room=south">Go South</a>
+                <a href="/?room=east">Go East</a>
+                <a href="/?room=west">Go West</a>
+                <a href="/?room=home">Return Home</a>
+            </div>
+
+            <!-- Action Form -->
+            <div class="action-form">
+                <form method="POST">
+                    <button type="submit" name="action" value="look" class="glow">Look Around</button>
+                    <button type="submit" name="action" value="move" class="glow">Move</button>
+
+                    <div class="text-action">
+                        <input type="text" name="text_input" placeholder="Type your command..." class="text-input">
+                        <button type="submit" name="action" value="custom" class="glow">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="npc-info">
+            {% if npc %}
+                <h3>NPC: {{ npc.name }}</h3>
+                <p>{{ npc.description }}</p>
+                <button onclick="interactWithNPC('{{ npc.name }}')" class="glow">Interact</button>
+            {% endif %}
+        </div>
+
+        <div class="object-info">
+            {% if object %}
+                <h3>Object: {{ object.name }}</h3>
+                <p>{{ object.description }}</p>
+                <button onclick="pickUpObject('{{ object.name }}')" class="glow">Pick Up</button>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

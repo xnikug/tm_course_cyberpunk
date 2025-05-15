@@ -1,0 +1,44 @@
+body {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    background-color: #0f0f0f;
+    color: #00ffea;
+    font-family: monospace;
+    padding: 2rem;
+    white-space: pre-wrap;
+    font-size: 12px;
+}
+
+.glow {
+    text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea;
+}
+
+.menu {
+    margin-bottom: 2rem;
+}
+
+.menu a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00ffea;
+    color: #00ffea;
+    text-decoration: none;
+    background-color: transparent;
+    font-weight: bold;
+    text-shadow: 0 0 3px #00ffea;
+}
+
+.menu a:hover {
+    background-color: #003333;
+    box-shadow: 0 0 10px #00ffea;
+}
+
+.cyberpunk-art {
+    margin-bottom: 2rem;
+}
+
+.controls {
+    margin-top: 2rem;
+}
